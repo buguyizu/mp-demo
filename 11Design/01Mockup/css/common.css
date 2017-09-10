@@ -1,0 +1,96 @@
+
+/* 全体 */
+div, span {font-family:arial; font-size:12pt;}
+/*桌子相关*/
+#tblList {border: 0px solid blue;}
+#tblList div {line-height: 20px; padding:5px; margin:3px; cursor:hand;
+border: 1px solid gray; color: seagreen; width: 40px; height: 40px; float:left;}
+
+/* 桌子图标 */
+.tbl-shadow{
+	box-shadow:5px 5px 5px #888888,0 9px 25px rgba(0,0,0,0.2),0 9px 25px rgba(0,0,0,0.1) inset;
+}
+/* 使用中 */
+.ui-icon-free:after,
+.ui-icon-order:after,
+.ui-icon-dinner:after,
+.ui-icon-paying:after,
+.ui-icon-booked:after
+{
+	width:30px;height:30px;
+	background-size: 100%;
+	margin-left:-15px;
+	background-color:transparent;
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 15px;
+	border-bottom-right-radius: 15px;
+	box-shadow: 5px 5px 5px #888888;
+}
+
+/* 空闲 */
+.ui-icon-free:after
+{
+	box-shadow:2px 2px 2px #888888,0 9px 25px rgba(0,0,0,0.2);
+}
+
+/* 未下单 */
+.ui-icon-order:after {
+	background-image: url("../img/system.ico");
+}
+/* 已下单 */
+.ui-icon-dinner:after {
+	background-image: url("../img/table.png");
+}
+/* 结账 */
+.ui-icon-paying:after {
+	background-image: url("../img/pay.ico");
+}
+/* 已预定 */
+.ui-icon-booked:after {
+	background-image: url("../img/wait.png");
+}
+
+
+/* 全体 */
+h1, div, div ul li, span {font-family:arial; font-size:12pt;}
+/* 菜品相关 */
+span.no {width:10%; float:left;}
+span.name {width:35%;color:orange; font-weight:bolder; float:left;}
+span.comment {width:25%;color:red; float:left;}
+span.price {width:10%;color:green; float:left;}
+span.num {width:5%; color:blue; font-weight:bolder; float:right;}
+span.unit {float:right;}
+/* 右面板相关 */
+span.infoCol1 {width:45%; float:left;}
+span.infoCol2 {float:left;}
+span.detailCol1 {width:45%; float:left;}
+span.detailCol2 {width:22%; float:left;}
+span.detailCol3 {width:15%; float:left;}
+span.detailCol4 {width:6%; float:left;}
+span.detailCol5 { float:left;}
+/* 左面板相关 */
+span.leftCol1 {width:20%; float:left;}
+span.leftCol2 {}
+/* 套餐相关 */
+ul.set-meal {}
+ul.set-meal li {margin-top:10px;}
+
+/* 结账页面 */
+/* 菜品相关 */
+span.totalAmtLabel {margin-top:10px;}
+span.totalAmt {font-size:2em;color:red;}
+span.rowTotal {width:15%; float:right;text-align:right;}
+span.tbl {}
+span.total {float:right;}
+span.time {float:right; font-size:8pt;}
+span.no2 {width:5%; float:left;}
+span.name2 {width:40%;color:orange; font-weight:bolder; float:left;}
+span.name3 {width:40%;float:left;}
+span.price2 {width:20%;float:left;text-align:right;}
+span.num2 {width:8%; font-weight:bolder; float:right;text-align:right;}
+span.unit2 {width:10%; float:right;}
+.return {}
+div.content {padding-top:10px;}
+div.content span {padding-right:20px;}
+div.amt {font-weight:bolder;color:red;}

@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html>  
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache"/>
+	<meta http-equiv="Pragma" content="no-cache"/>
+	<meta http-equiv="Expires" content="0"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>屏幕管理</title>
+	<link rel="stylesheet" type="text/css" href="css/common-pc.css"/>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.datepicker-zh-CN.js"></script>
+	<script type="text/javascript" src="js/jquery.blockUI.js"></script>
+	<script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript">
+    	var dialog;
+        $(function() {
+        	$( "#radio1,#radio2" ).buttonset();
+        	//$( "select" ).selectmenu();
+			dialog = $( "#dialog-form" ).dialog({
+				autoOpen: false,
+				modal: true,
+				height: 540,
+				width: 700,
+				buttons: {
+					"确定": function() {
+					}
+				},
+				create: function( event, ui ) {
+					//$( "#dialog-form select" ).selectmenu();
+				}
+			});
+		});
+	    function chooseType() {
+	    	if($('#codeType').val()==101){
+	    		$('.item-bigType').show();
+	    	}else{
+	    		$('.item-bigType').hide();
+	    	}
+	    }
+	    function addItem(){
+	    	dialog.dialog( "open" );
+	    }
+	    function deleteItem(obj){
+	    	$(obj).parent().parent().remove(); 
+	    }
+	    function clearItem(){
+		    $('#itemType1Add').val('');
+		    $('#itemType2Add').val('');
+			$('#processTypeAdd').val('');
+			$('#unitAdd').val('');
+			$('#priceAdd').val('');
+	    }
+		function setPro() {
+			if ($('#check5').prop('checked')) {
+				$('#proDt,#proDd').slideDown();
+			} else {
+				$('#proDt,#proDd').slideUp();
+			}
+		}
+    </script>
+	<style type="text/css">
+		td.col1 {
+			width: 8.5%;
+		}
+		td.col2 {
+			width: 16.5%;
+		}
+        
+        	#div1 {
+		    width: 300px;
+		    float:left;
+                margin-left:50px;
+		}
+	
+
+		.col-no     	{width:4%;text-align:left;}
+		.col-area  	{width:6%;text-align:left;}
+		.col-subject  		{width:5%;text-align:center;}
+		.col-company      {width:14%;text-align:left;}
+		.col-contact	{width:7%;text-align:left;}
+		.col-mobile   	{width:10%;text-align:left;}
+		.col-address	{width:18%;text-align:left;}
+        	.col-shareRate	{width:6%;text-align:right;}
+            .col-settlementInterval	{width:6%;text-align:center;}
+            .col-settlementMode	{width:6%;text-align:left;}
+		.col-operate    {width:18%;}
+		.col-operate a { margin: 0px; }
+		.input input[type="text"]	{width:100px;}
+		dl dt {
+			float:left;
+			padding-top: 2px;
+			margin-right: 10px;
+			width: 80px;
+		}
+		dl dd {
+			margin-bottom: 6px;
+		}	
+		.ui-buttonset label {
+			width: 30px;
+			padding: 2px;
+		}
+
+		.cell_rate input[type="text"],.cell-operateAfter input[type="text"]{
+			text-align: right;
+			width: 45px;
+		}
+		.label-warning	{color:orange;}
+		fieldset table {
+			margin: 0px auto;
+			min-width: 845px;
+			width: 90%;
+		}	
+		.col-operate a {
+			margin: 0px;
+		}
+	</style>
+</head>
+
+<body>    
+<div class="header">
+	<span>因华户外广告投放平台</span>
+</div>
+<div id="navigation">
+	<table border="0" cellspacing="0" cellpadding="0">
+		<tr>
+			<td class="col-a">
+				<ul>
+					<li><a href="#" onclick="window.location='U2010.html';"><span>创意</span></a></li>
+					<li><a href="#" onclick="window.location='U3010.html';"><span>屏幕</span></a></li>
+                              <li><a href="#" onclick="window.location='U5010.html';"><span>投放</span></a></li>
+					<li><a href="#" onclick="window.location='U6010.html';"><span>分成与统计</span></a></li>
+                              <li><a href="#" onclick="window.location='U7010.html';"><span>合作方</span></a></li>
+					<li><a href="U4060.html"><span>基础数据</span></a></li>
+					<li><a href="#" onclick="window.location='U8010.html';"><span>系统设定</span></a></li>
+				</ul>
+			</td>
+			<td class="col-b">
+				<input type="text" placeholder="查询编号">
+				<button>search</button>
+				<a href="#"><span>火锅城 一号分店 L0044【结算员】</span></a>
+				<a href="#"><span>[ 退出 ]</span></a>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="main-body">
+	<div class="main-side">
+		<ul>
+			<li><a href="U3010.html">屏幕所有者管理</a></li>
+			<li class="current-submenu"><a href="U3020.html">屏幕管理</a></li>
+		</ul>
+	</div>
+    <div class="main-content">
+    <fieldset>
+		<legend>屏幕选择</legend>
+        <table>
+            <tr>
+                <td class="label col1">区域</td>
+                <td class="input col2">
+					<select>
+					<option></option>
+    					<option>台州市</option>
+    					<option>温岭市</option>
+    					<option>松门镇</option>
+					</select>
+                </td>
+                <td class="label col1">主体性质</td>
+                <td class="input col2" id="radio1">
+						<input type="radio" name="can" value="1" checked id="can1"><label for="can1">公司</label>
+						<input type="radio" name="can" value="0" id="can0"><label for="can0">个人</label>
+                </td>
+                <td class="label col1">联系人</td>
+                <td class="input col2" >
+					<input type="text" id="nm" placeholder="联系人">
+                </td>
+            
+                 <td class="label col1">手机</td>
+                <td class="input col2">	<input type="text" id="nm" placeholder="手机"></td>
+            </tr>
+
+            <tr>
+            	<td class="label col1">分成比例</td>
+                <td class="input col2">
+					<select>
+						<option></option>
+						<option>8</option>
+    					<option>15</option>
+					</select>
+                </td>
+             	<td class="label col1">结算周期</td>
+                <td class="input col2">
+					<select>
+						<option></option>
+						<option>半月</option>
+    					<option>整月</option>
+					</select>
+                </td>
+            	<td class="label col1">结算方式</td>
+                <td class="input col2">
+					<select>
+						<option></option>
+						<option>支付宝</option>
+    					        <option>微信</option>
+                                    <option>银行转账</option>
+					</select>
+                </td>               
+                <td class="label">
+                	<a href="#" title="清空查询条件">清空</a>
+                </td>
+                <td class="label align-left">
+                	<input type="button" value="查询"/>
+                </td>
+            </tr>
+        </table>
+		<div id="dialog-form" title="添加屏幕">
+			<form>
+                    <ul style="float:left;width:320px">
+				<dl>
+					<dt>*区域</dt>
+					<dd>
+						<select>
+					<option></option>
+    					<option>台州市</option>
+    					<option>温岭市</option>
+    					<option>松门镇</option>
+					</select>
+					</dd>
+                	            <dt>主体</dt>
+					<dd id="radio1">
+						<input type="radio" name="can" value="1" checked id="can1"><label for="can1">公司</label>
+						<input type="radio" name="can" value="0" id="can0"><label for="can0">个人</label>
+					</dd>
+					<dt>公司名称</dt>
+					<dd>
+						<input type="text" id="cd" placeholder="公司名称">
+					</dd>
+                    	      <dt>*联系人</dt>
+					<dd>
+						<input type="text"  placeholder="联系人">
+					</dd>
+                    	      <dt>*手机号</dt>
+					<dd>
+						<input type="text"  placeholder="手机">
+					</dd>
+                    	     <dt>联系电话</dt>
+					<dd>
+						<input type="text"  placeholder="联系电话">
+					</dd>
+                    	      <dt>微信</dt>
+					<dd>
+						<input type="text"  placeholder="微信">
+					</dd>
+                    	      <dt>QQ</dt>
+					<dd>
+						<input type="text"  placeholder="QQ">
+					</dd>
+                    	      <dt>备注</dt>
+					<dd>
+						<textarea rows="2" placeholder="备注" cols="30"></textarea>
+					</dd>
+				
+					<dt>有效性</dt>
+					<dd id="radio2">
+						<input type="radio" name="valid" value="1" checked id="valid1"><label for="valid1">有効</label>
+						<input type="radio" name="valid" value="0" id="valid0"><label for="valid0">無効</label>
+					</dd>
+				</dl>
+                  </ul>
+                	<div id="div1">
+                    	<dl>    		
+					<dt>*分成比例</dt>
+                    	     <dd class="cell_rate">
+					    <input type="text"  placeholder="比例">%
+					</dd>
+					<dt>*结算周期</dt>
+					<dd>
+	                    	<select>
+						<option></option>
+						<option>半月</option>
+    					<option>整月</option>
+					</select>
+					</dd>
+                    	       <dt></dt>
+					<dd>
+	                             <label class="label-warning">半月：结算日为15日、月末</label>
+					</dd>
+                            <dt></dt>
+                        	<dd>
+                                 <label class="label-warning">整月：结算日为月末</label>
+					</dd>
+					<dt>*结算操作日</dt>
+					<dd class="cell-operateAfter">
+						结算日后<input type="text" placeholder=""/>天
+					</dd>
+					<dt>*结算方式</dt>
+					<dd >
+						<select>
+						<option></option>
+						<option>支付宝</option>
+    					        <option>微信</option>
+                                    <option>银行转账</option>
+					</select>
+					</dd>	
+                        	<dt></dt>			
+					<dd>待扩展。。。</dd>
+				</dl>
+                    	</div>
+			</form>
+		</div>
+    </fieldset>
+    <fieldset>
+		<legend>屏幕管理</legend>
+		<table class="table-style">
+			<thead>
+		        <tr title="可以排序，分页">
+					<th class="col-no">序号</th>
+					<th class="col-area">区域</th>
+					<th class="col-subject">主体</th>
+					<th class="col-company">公司名称</th>
+                    	      <th class="col-contact">联系人</th>
+					<th class="col-mobile">手机号</th>
+                              <th class="col-address">地址</th>
+					<th class="col-shareRate">分成比例</th>
+                    	      <th class="col-settlementInterval">结算周期</th>
+                              <th class="col-settlementMode">结算方式</th>
+					<th class="col-operate"><a href="#" class="addBtn" onclick="addItem();return false;">添加</a></th>
+		        </tr>
+		    </thead>
+		    <tbody>
+				<tr class="even">
+					<td class="col-no">1</td>
+					<td class="col-area">椒江</td>
+					<td class="col-subject">公司</td>
+					<td class="col-company">上海因华</td>
+					<td class="col-contact">林先生</td>
+					<td class="col-mobile">13888888888</td>
+					<td class="col-address">上海浦东</td>
+                             <td class="col-shareRate">20</td>
+					<td class="col-settlementInterval">整月</td>
+					<td class="col-settlementMode">微信</td>
+					<td class="col-operate">
+						<a href="#" class="editBtn" onclick="updateItem()">修改</a>
+						<a href="#" class="copyBtn">复制</a>
+						<a href="#" class="deleteBtn" onclick="deleteItem(this)">删除</a>
+					</td>
+		    	</tr>
+		    	<tr class="even">
+					<td class="col-no">2</td>
+					<td class="col-area">温岭</td>
+					<td class="col-subject">个人</td>
+					<td class="col-company"></td>
+					<td class="col-contact">陈先生</td>
+					<td class="col-mobile">13888888888</td>
+					<td class="col-address">温岭青商</td>
+                             <td class="col-shareRate">15</td>
+					<td class="col-settlementInterval">半月</td>
+					<td class="col-settlementMode">微信</td>
+					<td class="col-operate">
+						<a href="#" class="editBtn" onclick="updateItem()">修改</a>
+						<a href="#" class="copyBtn">复制</a>
+						<a href="#" class="deleteBtn" onclick="deleteItem(this)">删除</a>
+					</td>
+		    	</tr>
+                	<tr class="even">
+					<td class="col-no">3</td>
+					<td class="col-area">松门</td>
+					<td class="col-subject">公司</td>
+					<td class="col-company">温岭华哥</td>
+					<td class="col-contact">林先生</td>
+					<td class="col-mobile">13666666666</td>
+					<td class="col-address">温岭创业</td>
+                             <td class="col-shareRate">20</td>
+					<td class="col-settlementInterval">整月</td>
+					<td class="col-settlementMode">微信</td>
+					<td class="col-operate">
+						<a href="#" class="editBtn" onclick="updateItem()">修改</a>
+						<a href="#" class="copyBtn">复制</a>
+						<a href="#" class="deleteBtn" onclick="deleteItem(this)">删除</a>
+					</td>
+		    	</tr>
+		    </tbody>
+		</table>
+	</fieldset>
+    </div>    
+</div>
+<div class="footer">
+	<span>
+		  Copyrights(C)2014 销售咨询╱技术支持：林先生(13634034017)
+	</span>
+</div>
+</body>
+</html>

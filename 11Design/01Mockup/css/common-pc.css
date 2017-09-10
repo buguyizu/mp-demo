@@ -1,0 +1,43 @@
+﻿@charset "UTF-8";
+
+@import "jquery-ui.min.css";
+@import "global.css";
+@import "table.css";
+@import "style-pc.css";
+
+.holder {top:0;}
+/* for datepicker */
+.ui-datepicker .ui-datepicker-title:after {
+	content: '月';
+}
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year {
+	width: 36%;
+	margin: 1px 4px;
+}
+
+/* for datepicker button */
+.ui-datepicker-trigger {
+	width: 25px;
+	margin-bottom: 2px;
+	height: 20px;
+}
+.ui-button-text-only .ui-button-text {
+	padding: 0px;
+}
+
+/* for jquery-ui button */
+button.ui-corner-all {
+	border-radius: 1px;
+}
+
+/* for jquery-ui icon */
+.header .ui-icon {
+	float: right;
+	margin: 8px;
+	cursor: help;
+}
+
+.ui-tooltip li {
+	list-style: square inside none;
+}

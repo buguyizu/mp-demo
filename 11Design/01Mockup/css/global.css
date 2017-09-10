@@ -1,0 +1,104 @@
+@charset "UTF-8";
+
+* {
+	font-size: 10pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    margin-bottom: 5px;
+}
+
+body {
+	background-color: white;
+	color: black;
+	margin: 1px;
+	padding: 0px;
+	min-width: 1005px;
+	overflow: auto;
+}
+
+body > div{
+	margin: 0px;
+}
+
+form {
+	margin: 0px;
+    padding: 0px;
+}
+
+p {
+    padding: 2px 0px 5px;
+    margin: 0px;
+}
+
+fieldset {
+    margin: 0px;
+	margin-top: 6px;
+    padding: 2px 6px 6px 6px;
+	border: thin solid gainsboro;
+	border-radius: 2px;
+}
+
+fieldset > div,
+fieldset > table {
+	width: 845px;
+}
+
+ul, ol {
+    margin: 0px;
+    padding: 0px;
+}
+
+li {
+	list-style-type: none;	
+}
+
+a {
+    color: #3c8cb7;
+    text-decoration: none;
+    background-color: inherit;
+}
+
+a:hover {
+    /*color: #575757;*/
+    text-decoration: underline;
+    background-color: inherit;
+}
+
+hr {
+    border-collapse: collapse;
+}
+
+img {
+    border: none;
+}
+
+input[type="text"] {
+	border:1px solid #CCC; 
+    color:#000066;
+    ime-mode:inactive; 
+    height:20px;
+    width:160px;
+    margin-right:3px
+}
+
+input[type="text"]:focus {
+	border-color:#87CEFA; 
+}
+button,
+input[type="button"],
+input[type="submit"] {
+	padding: 1px;
+	width: 71px;
+	height: 25px;
+	font-size: 10pt;
+	font-family: Arial, Helvetica, sans-serif;
+	border-radius: 1px;
+}
+
+select {
+	border:1px solid #CCC;
+    height:25px;
+    white-space: nowrap;
+}

@@ -1,0 +1,393 @@
+﻿@charset "UTF-8";
+.holder {top:0;}
+/** 
+    全局样式表(共通)
+*/
+
+/* logo图标 */
+.header {
+    clear: both;
+	padding: 0px;
+	width: 100%;
+	height: 126px;
+	border-radius: 2px 2px 0px 0px;
+	box-shadow: 0px 8px 60px rgba(60,140,183,0.6) inset;/*
+	background-image: url(../img/xia-min.png);*/
+	background-size: 145px 86px;
+	background-repeat: no-repeat;
+	background-position: 6px 6px;
+}
+
+.header .logo {
+	font-size:22pt;
+	font-family: Microsoft YaHei, sans-serif;
+	float: left;
+	text-shadow: none;
+	transition: transform 1s;
+	-moz-transition: -moz-transform 1s;
+	-webkit-transition: -webkit-transform 1s;
+	-o-transition: -o-transform 1s;
+}
+
+.header .logo:hover {
+	transform:rotate(360deg);
+	-moz-transform:rotate(360deg); /* Firefox 4 */
+	-webkit-transform:rotate(360deg); /* Safari and Chrome */
+	-o-transform:rotate(360deg); /* Opera */
+}
+
+.header > span:first-child {
+	float: left;
+	margin: 50px 0px 0px 100px;
+	letter-spacing:6px;
+	text-shadow:7px 3px 3px #999d8c;
+	font-family: Microsoft YaHei, sans-serif;
+    font-weight: bold;
+	font-size:20pt;
+	color: #4f5555;
+}
+
+.header ul{
+	float: right;
+	margin: 10px 10px;
+}
+
+.header ul li {
+	border: thin none black;
+	margin: 3px 0px;
+	height: 8px;
+}
+
+.header ul li:hover {
+}
+
+.footer {
+    clear: both; 
+    color: #3c8cb7;
+    padding: 6px 0px;
+    border-top: 2px solid #3c8cb7; 
+    text-align: center; 
+    width: 100%;
+	border-radius:0px 0px 5px 5px;
+	min-height: 30px;
+    /*box-shadow: 0px 0px 60px rgba(60,140,183,0.9) inset;*/
+}
+
+.footer a { 
+    text-decoration: underline; 
+}
+
+#navigation {
+    border-bottom: 2px solid #3c8cb7;
+	margin-top: -26px;
+}
+
+#navigation table {
+	width:100%;
+    padding: 0px 0px;
+}
+
+#navigation .col-a {
+	width: 55%;
+}
+#navigation .col-b {
+	width: 45%;
+	text-align: right;
+}
+#navigation .col-b a, #navigation .col-b input {
+	margin-right: 10px;
+}
+#navigation .col-b input {
+	padding-left: 6px;
+	width: 120px;
+	border-radius: 2px;
+}
+#navigation .col-b button {
+	margin-right: 20px;
+	width: 22px;
+	height: 22px;
+	margin-bottom: 2px;
+	border-radius: 0px;
+	margin-left: -36px;
+}
+
+#navigation li {
+	border-radius: 2px;
+    display: inline;
+	margin-left: 6px;
+    padding: 5px 6px;
+    border:1px solid #3c8cb7;
+    font-weight: bold;
+}
+
+#navigation li.bill {
+	border: 1px solid #3c8cb7;
+	border-bottom-color: #3c8cb7;
+}
+
+#navigation li.bill,
+#navigation li.bill a {
+	color: black;
+}
+
+#navigation li#current,
+#navigation li#current a,
+#navigation li:hover,
+#navigation li:hover a {
+	color:white;
+	background-color:#3c8cb7;
+}
+
+#navigation li:hover.bill,
+#navigation li:hover.bill a {
+	color: black;
+	background-color: transparent;
+}
+
+.main-body {
+    width: 100%;
+    overflow:hidden;
+    border-left:thin none #3c8cb7;
+    border-right:thin none #3c8cb7;
+}
+
+.main-side,
+.main-content {
+    box-sizing: border-box;
+    float: left;
+    margin: 0px;
+}
+
+.main-side {
+    border: 0px solid #d6d6d6;
+    padding: 0px;
+    width: 14%;
+    color: #aaaaaa;
+}
+
+.main-side ul {
+	border: thin solid gainsboro;
+	border-radius: 2px;
+	margin-top: 15px;
+    background-color: #F6F6F6;
+}
+
+.main-side li {
+	list-style: square inside none;
+	margin: 1px 0px;
+	white-space: nowrap;
+	overflow: hidden;
+	border-radius: 2px;
+    color:#6495ED;
+    padding:5px 0px 5px 4px;
+}
+
+.main-side .current-submenu,
+.main-side .current-submenu a,
+.main-side li:hover,
+.main-side li:hover a {
+   color: white;
+   background-color:#3c8cb7;
+}
+
+.main-side .bottom-submenu {
+    cursor:pointer;
+}
+
+.main-side ul li.unable {
+    color: #AAAAAA;
+}
+
+.main-content {
+    padding: 2px 0px 6px 4px;
+    width: 86%;
+    min-height:400px;
+    border-left: 1px solid snow;
+}
+
+.main-body2 .main-side {
+	width: 3%;
+}
+.main-body2 .main-side li {
+	list-style: none;
+}
+.main-body2 .main-content {
+	width: 97%;
+}
+/*struts2 tag template styles*/
+.message-area li {
+	margin: 2px;
+	padding: 2px;
+	border-radius: 2px;
+}
+
+.message-area span:before {
+	content: '● ';
+}
+
+.field-error,
+.action-error,
+.errorMessage {
+    color: red;
+}
+
+.action-message,
+.actionMessage {
+    color: blue;
+}
+
+.errorField,
+.error-field {
+    background-color: khaki;
+}
+
+span.required {
+    color: blue;
+}
+
+#totalAmt{
+    text-align:right;
+    border: 0;
+}
+
+.group-head {
+	width: 100%;
+	text-align:left;
+	border-bottom-style:solid;
+	border-width:1px;
+	font-weight: bold;
+	padding:10px 0px 2px 0px;
+}
+
+.groupCol1,
+.groupCol2,
+.groupCol3,
+.totalCol1,
+.totalCol2,
+.totalCol3,
+.totalCol4,
+.totalCol5 {
+	box-sizing: border-box;
+	white-space:nowrap;
+	border-bottom-style:dotted;
+	border-color:#c8c8ff;
+	border-width:1px;
+	float:left;
+	padding:10px 1px 2px 3px;
+}
+.groupCol1 {
+	width: 18.3%;
+	text-align:left;
+	background-color:#f2eada;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	-moz-binding: url('ellipsis.xml#ellipsis');
+}
+.groupCol2 {
+	width: 5.6%;
+	text-align:right;
+}
+.groupCol3 {
+	width: 9.4%;
+	text-align:right;
+	padding:10px 9px 2px 3px;
+}
+
+.totalCol1,
+.totalCol2,
+.totalCol3,
+.totalCol4,
+.totalCol5 {
+	padding:10px 0px 2px 0px;
+	background-color:#f2eada;
+	text-align: center;
+}
+.totalCol1 {
+	width: 217px;
+	text-align: right;
+}
+.totalCol2 {
+	width: 217px;
+	text-align: left;
+}
+.totalCol3 {
+	background-color: white;
+	width: 406px;
+	font-weight: bold;
+}
+
+.select-btn{
+    color:#666666;
+    font-weight:bold;
+    padding:1px;
+    width:30px;
+    height:16px; 
+    margin-top: -4px; 
+    margin-bottom: 0px;
+}
+
+.sum-span{
+    width:100%;
+    text-align:right;
+}
+
+.stamp {
+	position:absolute;
+	z-index: 1000;
+	border:2px solid red;
+	padding:5px;
+	margin: 120px 0 0 500px;
+	text-align: center;
+	color:red;
+	font-weight:bolder;
+	font-size:20pt;
+	transform: rotate(-30deg);
+	-ms-transform: rotate(-30deg);		/* IE 9 */
+	-webkit-transform: rotate(-30deg);	/* Safari and Chrome */
+	-o-transform: rotate(-30deg);		/* Opera */
+	-moz-transform: rotate(-30deg);
+}
+
+.align-right {
+	text-align: right;
+}
+
+input.label, input:focus.label {
+    border: none;
+    box-shadow: none;
+    margin-right: 0px;
+}
+
+input[type="text"].datepicker {
+	width:100px;
+}
+
+input[type="text"].ime-invalid {
+	ime-mode: disabled;
+}
+
+input[type="text"].len-code-cd {
+	width: 50px;
+}
+
+input[type="text"].len-code-nm {}
+
+select.len-code-nm {
+	width: 120px;
+}
+
+select.len-staff {
+	width: 130px;
+}
+
+.invalid {
+	color: red;
+	font-weight: bold;
+}
+
+.payed {
+	color: orange;
+	font-weight: bold;
+}
