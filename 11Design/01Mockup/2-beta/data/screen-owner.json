@@ -1,19 +1,18 @@
 {
+"ths":["#",
+"区域",
+"主体",
+"公司名称",
+"联系人",
+"手机号",
+"地址",
+"分成比例",
+"结算周期",
+"结算方式"],
 "records":[
-{"Name":"Alfreds Futterkiste","City":"Berlin","Country":"Germany"},
-{"Name":"Ana Trujillo Emparedados y helados","City":"M��xico D.F.","Country":"Mexico"},
-{"Name":"Antonio Moreno Taquer��a","City":"M��xico D.F.","Country":"Mexico"},
-{"Name":"Around the Horn","City":"London","Country":"UK"},
-{"Name":"B's Beverages","City":"London","Country":"UK"},
-{"Name":"Berglunds snabbk?p","City":"Lule?","Country":"Sweden"},
-{"Name":"Blauer See Delikatessen","City":"Mannheim","Country":"Germany"},
-{"Name":"Blondel p��re et fils","City":"Strasbourg","Country":"France"},
-{"Name":"B��lido Comidas preparadas","City":"Madrid","Country":"Spain"},
-{"Name":"Bon app'","City":"Marseille","Country":"France"},
-{"Name":"Bottom-Dollar Marketse","City":"Tsawassen","Country":"Canada"},
-{"Name":"Cactus Comidas para llevar","City":"Buenos Aires","Country":"Argentina"},
-{"Name":"Centro comercial Moctezuma","City":"M��xico D.F.","Country":"Mexico"},
-{"Name":"Chop-suey Chinese","City":"Bern","Country":"Switzerland"},
-{"Name":"Com��rcio Mineiro","City":"S?o Paulo","Country":"Brazil"}
+["椒江","公司","上海因华","林先生","13888888888","上海浦东","20","整月","微信"],
+["温岭","个人","上海因华","陈先生","13888888888","温岭青商","15","半月","微信"],
+["松门","公司","温岭华哥","林先生","13888888888","温岭创业","20","整月","微信"]
 ]
 }
+

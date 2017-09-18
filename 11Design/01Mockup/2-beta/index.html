@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -7,43 +7,145 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
+	<style>
+	.sidebar {
+	  position: fixed;
+	  top: 51px;
+	  bottom: 0;
+	  left: 0;
+	  z-index: 1000;
+	  padding: 20px;
+	  overflow-x: hidden;
+	  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+	  border-right: 1px solid #eee;
+	}
+
+	/* Sidebar navigation */
+	.sidebar {
+	  padding-left: 0;
+	  padding-right: 0;
+	}
+
+	.sidebar .nav {
+	  margin-bottom: 20px;
+	}
+
+	.sidebar .nav-item {
+	  width: 100%;
+	}
+
+	.sidebar .nav-item + .nav-item {
+	  margin-left: 0;
+	}
+
+	.sidebar .nav-link {
+	  border-radius: 0;
+	}
+	</style>
     <script src="./js/angular.min.js"></script>
   </head>
-  <body>
-	<div class="container" ng-app="myApp" ng-controller="myCtrl">
-    <h1>Hello, world!</h1>
-	  <table class="table">
-		  <thead>
-			<tr>
-			  <th scope="col">#</th>
-			  <th scope="col">{{firstName}}</th>
-			  <th scope="col">{{firstName}}</th>
-			  <th scope="col">Username</th>
-			</tr>
-		  </thead>
-		  <tbody>
-			<tr ng-repeat="r in rows">
-			  <th scope="row">1</th>
-			  <td>{{r.Name}}</td>
-			  <td>Otto</td>
-			  <td>@mdo</td>
-			</tr>
-		  </tbody>
-		</table>
-	</div>
+  <body ng-app="myApp" ng-controller="myCtrl">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">因华户外广告投放平台</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+		  <ul class="navbar-nav mr-auto">
+			<li class="nav-item active">
+			  <a class="nav-link" href="#">主页<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">创意</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">屏幕</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">投放</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">分成与统计</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">合作方</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">基础数据</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">系统设定</a>
+			</li>
+		  </ul>
+		  <form class="form-inline">
+			<input class="form-control mr-sm-2" type="search" placeholder="搜索">
+			<button class="btn btn-outline-info my-2 my-sm-0" type="submit">搜索</button>
+		  </form>
+		</div>
+    </nav>
+    <div class="container-fluid">
+	  <div class="row">
+		<nav class="col-sm-3 col-md-2 d-none d-sm-block sidebar">
+		  <ul class="nav nav-pills flex-column">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Overview <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Reports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Analytics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Export</a>
+            </li>
+          </ul>
+		</nav>
+		<main class="col-sm-9 ml-sm-auto col-md-10 pt-3" role="main">
+          <h1>Dashboard</h1>
+			<table class="table table-sm">
+			  <caption>屏幕所有者管理</caption>
+			  <thead>
+				<tr>
+				  <th scope="col" ng-repeat="r in ths">{{r}}</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr ng-repeat="r in rows">
+				  <th scope="row">{{ $index + 1 }}</th>
+				  <td>{{r[0]}}</td>
+				  <td>{{r[1]}}</td>
+				  <td>{{r[2]}}</td>
+				  <td>{{r[3]}}</td>
+				  <td>{{r[4]}}</td>
+				  <td>{{r[5]}}</td>
+				  <td>{{r[6]}}</td>
+				  <td>{{r[7]}}</td>
+				  <td>{{r[8]}}</td>
+				</tr>
+			  </tbody>
+			</table>
+	  <hr/>
+	  <footer>
+        <p>© Company 2017</p>
+      </footer>
+		</main>
+      </div>
+    </div>
     <script src="./js/jquery-3.2.1.min.js"></script>
     <script src="./js/popper.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
     <script>
-		var app = angular.module('myApp', []);
-		app.controller('myCtrl', function($scope, $http) {
-			$scope.firstName= "John";
-			$scope.lastName= "Doe";
-			$http.get("./data/screen-owner.json")
-			.then(function (result) {
-				$scope.rows = result.data.records;
-			});
-		});
-	</script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope, $http) {
+            $scope.firstName= "John";
+            $scope.lastName= "Doe";
+            $http.get("./data/screen-owner.json")
+            .then(function (result) {
+                $scope.rows = result.data.records;
+                $scope.ths = result.data.ths;
+            });
+        });
+    </script>
   </body>
 </html>
