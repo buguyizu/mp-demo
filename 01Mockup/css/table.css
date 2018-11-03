@@ -1,0 +1,178 @@
+﻿@charset "UTF-8";
+.holder{top:0;}
+/*
+    查询区域
+*/
+td.label,
+td.button {
+    background-color:#fcfcfc;
+    border-color:#000000;
+    border-width:0px;
+    color:#000066;
+    padding-right:5px;
+    padding-top:2px;
+}
+
+td.input {
+	padding-top:2px;
+    background-color:#fcfcfc;
+    border-width:1px;
+    border-style:none none none none;
+    border-color:#cccccc #dcdcdc;
+    color:#000066;
+    padding-left:2px;
+    word-wrap:break-word;
+    empty-cells: show;
+}
+
+td.label {
+    text-align:right;
+}
+td.button {
+	text-align: center;
+}
+
+/*
+    查询结果区域
+*/
+.table-style {
+    text-align:center;
+    border-width:0px;
+    border-style:solid none;
+    border-color:#336600;
+    border-collapse:collapse;
+}
+
+.table-head,
+.table-detail {
+	text-align:center;
+	border-style:solid none;
+	border-color:#336600;
+	border-collapse:collapse;
+	table-layout:fixed;
+	width: 828px;
+}
+
+.table-head {
+	border-width:0px 0px 0px 0px;
+}
+
+.table-detail {
+	border-width:1px 0 1px 0;
+}
+
+.table-head th,
+.table-style th {
+    background-color:#F6F6F6;
+    border-width:1px;
+    border-style:none none solid solid;
+    border-color:#000066 #ffffff;
+    text-align:center;
+	padding-top:6px;
+	padding-bottom:5px;
+}
+
+/*
+    明细区域
+*/
+tr.odd,
+tr.even,
+tr.has,
+tr.del,
+tr.last {
+}
+
+tr.odd td,
+tr.even td,
+tr.has td,
+tr.del td,
+tr.last td,
+td.last {
+    border-color: #c8c8ff;
+    border-width: 1px;
+    padding: 5px 5px 2px 5px;
+    border-style: solid solid solid solid;
+}
+
+tr.even td {
+    background-color: #FFFFFF;
+}
+tr.odd td {
+    background-color: #f2eada;
+}
+tr.has td {
+    background-color: yellow;
+}
+tr.del td {
+    background-color: lightgrey;
+}
+tr.last td,
+tr.last td a,
+td.last {
+	color: white;
+    background-color: #3c8cb7;
+    height: 30px;
+}
+
+.sort-asc:after {
+	content: '▼';
+}
+.sort-desc:after {
+	content: '▲';
+}
+
+/*
+    合计区域(foot)
+*/
+tr.foot {
+}
+
+tr.foot td{
+    background-color:#F6F6F6;
+    border-width:0.09em;
+    border-style:solid none none solid;
+    border-color:#000066 #ffffff;
+    padding:6px 5px 5px 5px;  
+    font-weight:bold;
+}
+/*
+    分页区域
+*/
+td.paging-summary {
+    text-align: right;
+    min-width: 50%;
+}
+
+td.paging-ctrlStyle {
+    text-align: center;
+    width: 15px;
+}
+
+td.paging-style {
+    text-align: center;
+    width: 15px;
+}
+
+td.paging-style input{
+    border: 1px solid #2277D9;
+    text-align: center;
+    width: 30px;
+}
+
+td.align-left {
+	text-align: left;
+}
+
+td.align-center {
+	text-align: center;
+}
+
+.statistics {
+}
+
+.statistics td.col1 { width:10%; }
+.statistics td.col2 { width:19%; }
+.statistics td.col3 { width:10%; }
+.statistics td.col4 { width:19%; }
+.statistics td.col5 { width:10%; }
+.statistics td.col6 { width:32%; }
